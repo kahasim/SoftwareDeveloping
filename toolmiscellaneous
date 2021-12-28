@@ -1,0 +1,85 @@
+
+import java.util.*;
+import java.io.*;
+
+class Animals {
+    void speak() {
+        System.out.println("The Animal class has the sound of the animal");
+    }
+}
+
+class Dog extends Animals implements asd {
+    void speak() {
+        System.out.println("The dog is jubilantly and loudly barking!");
+    }
+
+    public void sing() {
+        System.out.println("The dog is singing!");
+    }
+}
+
+interface asd {
+    void sing();
+}
+
+public class App {
+
+    public static void main(String[] args) throws Exception {
+
+        PrintStream ps = new PrintStream(new File("output.txt"));
+        InputStream is = new FileInputStream("input.txt");
+        int i = 0;
+        int[] n = null;
+
+        File file = new File("input.txt");
+        File file2 = new File("input2.txt");
+        Scanner scan2 = new Scanner(file2);
+
+        List<String> list = List.of("s1", "s2", "s3", "s4", "s5");
+        System.out.println("Hello, World!");
+        System.out.println(list);
+        int t = 6;
+        List<Integer> list2 = new ArrayList<>();
+        List<String> list3 = new ArrayList<>();
+        HashSet<String> pairs = new HashSet<String>(t);
+
+        try (Scanner scan = new Scanner(file)) {
+            while (scan.hasNext()) {
+                int x = scan.nextInt();
+                // n[i] = x;
+                list2.add(x);
+
+                System.out.println(x + " " + list2.get(i));
+
+                i++;
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Execution Error!");
+        }
+
+        Animals a = new Animals();
+        Dog d = new Dog();
+        // asd sAsd = new asd();
+        System.out.println();
+        a.speak();
+        d.speak();
+        d.sing();
+        System.out.println();
+
+        int ik = 0;
+        while (ik < t) {
+            String[] x = new String[t];
+            String[] y = new String[t];
+            x[ik] = scan2.next();
+            y[ik] = scan2.next();
+
+            // n[i] = x;
+            pairs.add("(" + x[ik] + "," + y[ik] + ")");
+
+            System.out.println(x[ik] + " " + y[ik] + " " + pairs.size());
+
+            ik++;
+        }
+    }
+}
