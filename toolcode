@@ -1,0 +1,114 @@
+package Default;
+
+public class Toolbox {
+
+	import org.antlr.runtime.tree.RewriteEmptyStreamException
+	import scala.io.StdIn
+	import scala.Console.{BOLD, UNDERLINED,RESET}
+	import scala.collection.immutable.ListMap
+	import scala.collection.immutable.Seq
+	import scala.collection.immutable.Set
+	import scala.Console
+	import scala.Seq
+	import scala.io.StdIn.{readLine,readInt}
+
+
+	 import java.sql.{Connection,DriverManager}
+
+	object Toolbox {
+	  
+
+
+	def main(args: Array[String]): Unit = {
+
+
+	 println("Toolbox Application Open")
+	 
+
+	println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	println("101	   Socket	    0.5	          English	                  1st")
+	println("102	   Socket	0.4375	          English	                  1st")
+	println("103	   Socket	0.375	          English	                  1st")
+	println("104	   Socket	0.34375	          English			  1st")
+	println("105	   Socket	0.3125	          English			  1st")
+	println("106	   Socket	0.28125	          English			  1st")
+	println("107	   Socket	0.25	          English			  1st")
+	println("201	   Socket	13	           Metric			  2nd")
+	println("202	   Socket	14	           Metric			  2nd")
+	println("203	   Socket	15	           Metric			  2nd")
+	println("204	   Socket	16	           Metric			  2nd")
+	println("205	   Socket	17	           Metric			  2nd")
+	println("301	   Wrench	0.5	           English			  3rd")
+	println("302	   Wrench	0.25           	   English			  3rd")
+
+
+
+	    println()
+
+
+	    val end = 9
+	    do{
+	        println("Please enter the information for your tool search below")
+	        println("Tool Search " )
+	        val name = readLine()
+
+	if(name == "all")
+	{println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	println("101	   Socket	    0.5	          English	                  1st")
+	println("102	   Socket	0.4375	          English	                  1st")
+	println("103	   Socket	0.375	          English	                  1st")
+	println("104	   Socket	0.34375	          English			  1st")
+	println("105	   Socket	0.3125	          English			  1st")
+	println("106	   Socket	0.28125	          English			  1st")
+	println("107	   Socket	0.25	          English			  1st")
+	println("201	   Socket	13	           Metric			  2nd")
+	println("202	   Socket	14	           Metric			  2nd")
+	println("203	   Socket	15	           Metric			  2nd")
+	println("204	   Socket	16	           Metric			  2nd")
+	println("205	   Socket	17	           Metric			  2nd")
+	println("301	   Wrench	0.5	           English			  3rd")
+
+	}
+	if(name == "wrench"){
+	println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	println("301	   Wrench	0.5	           English			  3rd")
+	println("302	   Wrench	0.25           	   English			  3rd")
+
+
+	}
+
+	if(name == "socket"){
+	println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	println("101	   Socket	    0.5	          English	                  1st")
+	println("102	   Socket	0.4375	          English	                  1st")
+	println("103	   Socket	0.375	          English	                  1st")
+	println("104	   Socket	0.34375	          English			  1st")
+	println("105	   Socket	0.3125	          English			  1st")
+	println("106	   Socket	0.28125	          English			  1st")
+	println("107	   Socket	0.25	          English			  1st")
+	println("201	   Socket	13	           Metric			  2nd")
+	println("202	   Socket	14	           Metric			  2nd")
+	println("203	   Socket	15	           Metric			  2nd")
+	println("204	   Socket	16	           Metric			  2nd")
+	println("205	   Socket	17	           Metric			  2nd")
+	}
+
+	if(name == "hammer"){
+	println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	}
+
+	if(name == "pliers"){
+	println("Tool#	ToolName	Bolt Sizes	Units(English()/Metric(mm))	LocationShelf")
+	}
+
+
+
+	    println("Done you want to end the Program Y{0}/N[1}")
+	    val end = readInt()
+	     }while(end < 1)
+	   
+	  }
+	}
+
+	
+}
